@@ -1,12 +1,12 @@
 module.exports = [
 	{
 		test: /\.jsx?$/,
-		exclude: /(node_modules|bower_components|public)/,
+		exclude: /(node_modules|bower_components|dist)/,
 		loaders: ['react-hot']
 	},
 	{
 		test: /\.jsx?$/,
-		exclude: /(node_modules|bower_components|public)/,
+		exclude: /(node_modules|bower_components|dist)/,
 		loader: 'babel',
 		query: {
 		  presets: ['es2015', 'react'],

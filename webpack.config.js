@@ -4,8 +4,8 @@ var path = require('path');
 var loaders = require('./webpack.loaders');
 var HtmlWebpackPlugin = require('html-webpack-plugin');
 
-const HOST = process.env.HOST || "127.0.0.1";
-const PORT = process.env.PORT || "8888";
+const HOST = process.env.HOST || "localhost";
+const PORT = process.env.PORT || "3000";
 
 // global css
 loaders.push({
@@ -42,7 +42,7 @@ module.exports = {
 	],
 	devtool: process.env.WEBPACK_DEVTOOL || 'cheap-module-source-map',
 	output: {
-		path: path.join(__dirname, 'public'),
+		path: path.join(__dirname, 'dist'),
 		filename: 'bundle.js'
 	},
 	resolve: {
@@ -52,7 +52,7 @@ module.exports = {
 		loaders
 	},
 	devServer: {
-		contentBase: "./public",
+		contentBase: "./dist",
 		// do not print bundle build stats
 		noInfo: true,
 		// enable HMR
@@ -68,7 +68,7 @@ module.exports = {
 		new webpack.NoErrorsPlugin(),
 		new webpack.HotModuleReplacementPlugin(),
 		new HtmlWebpackPlugin({
-			template: './src/template.html'
+			template: './src/index.html'
 		}),
 	]
 };

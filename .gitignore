@@ -27,5 +27,7 @@ build/Release
 node_modules
 
 # Ignore build files
-public
+dist
+
+# IntelliJ files
 .idea
