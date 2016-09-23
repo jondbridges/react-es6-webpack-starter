@@ -9,9 +9,8 @@ class App extends React.Component {
         <p>Global bootstrap css import works too as you can see on the following button.</p>
         <p><a className="btn btn-primary btn-lg">Enjoy!</a></p>
       </div>
-    )
+    );
   }
 }
 
 export default App;
-
