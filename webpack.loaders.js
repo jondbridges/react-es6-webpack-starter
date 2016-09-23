@@ -1,11 +1,11 @@
 module.exports = [
 	{
-		test: /\.jsx?$/,
+		test: /\.js?$/,
 		exclude: /(node_modules|bower_components|dist)/,
 		loaders: ['react-hot']
 	},
 	{
-		test: /\.jsx?$/,
+		test: /\.js?$/,
 		exclude: /(node_modules|bower_components|dist)/,
 		loader: 'babel',
 		query: {
